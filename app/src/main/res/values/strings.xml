@@ -1,0 +1,32 @@
+<resources>
+    <string-array name="province">
+        <item>province</item>
+        <item>กรุงเทพ</item>
+        <item>ตราก</item>
+        <item>นนบุรี</item>
+        <item>นคราชสีมา</item>
+        <item>กระบี่</item>
+        <item>ยะรา</item>
+    </string-array>
+    <string-array name="detail">
+        <item>detail</item>
+        <item>บ้านหลังเดียว</item>
+        <item>บ้าน2ชั้น</item>
+        <item>บ้าน3ชั้น</item>
+        <item>คอนโด</item>
+        <item>รีซอค</item>
+    </string-array>
+    <string-array name="price">
+        <item>price</item>
+        <item>10000+</item>
+        <item>20000+</item>
+        <item>50000+</item>
+        <item>1000000+</item>
+    </string-array>
+    <string name="app_name">SellHometTH</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
