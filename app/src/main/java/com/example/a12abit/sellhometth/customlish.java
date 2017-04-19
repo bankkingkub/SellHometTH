@@ -1,5 +1,6 @@
 package com.example.a12abit.sellhometth;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +10,20 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
 public class customlish extends BaseAdapter {
     Context mContext;
     String[] strName,d;
     int[] resId;
+    int i;
+    String[] member_arr;
     JSONObject c;
 
-    public customlish(Context context, String c, int d) {
+    public customlish(Context context, int i, String[] member_arr) {
         this.mContext= context;
+        this.member_arr = member_arr;
+        Log.d("gggg","");
 
     }
 
@@ -40,7 +47,7 @@ public class customlish extends BaseAdapter {
             view = mInflater.inflate(R.layout.customlayout, parent, false);
 
         TextView textView = (TextView)view.findViewById(R.id.textView1);
-        textView.setText(strName[position]);
+        textView.setText(member_arr[position]);
 
         TextView textView2 = (TextView)view.findViewById(R.id.textView2);
         textView.setText(strName[position]);

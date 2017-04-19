@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -53,15 +54,18 @@ public class MainActivity extends AppCompatActivity
             for ( i = 0; i < data.length(); i++) {
                 c = data.getJSONObject(i);
                 member_list.add(c.getString("n"));
+                member_list.add(c.getString("m"));
+                member_list.add(c.getString("o"));
+                Log.d("gggg",member_list.get(i));
                 String a = String.valueOf(data.length());
                 //Toast.makeText(this,'n', Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(), a, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), a, Toast.LENGTH_LONG).show();
             }
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        customlish customlish = new customlish(getApplicationContext(),i,member_arr);
+
         ListView l = (ListView) findViewById(R.id.lv1);
         l.setAdapter(new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, member_list));
